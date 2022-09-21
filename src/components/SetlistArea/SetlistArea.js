@@ -2,20 +2,27 @@ import React from 'react';
 import RandomSetlist from '../RandomSetlist/RandomSetlist';
 import './SetlistArea.css';
 
-const SetlistArea = ({setlist}) => {
+const SetlistArea = ({setlist, getRandomSetlist}) => {
     console.log(setlist)
-    // const foundSetlist = setlist.map(setlist => <RandomSetlist 
-    //     key={setlist.showid}
-    //     setlist={setlist.permalink}
-    //     showdate={setlist.showdate}
-    //     id={setlist.showid}
-        
-    //     />)
+    const thesetlist = setlist.map((setlist) => <RandomSetlist 
+           key={setlist.uniqueid}
+           song={setlist.song}
+           />)
+
+
     return (
-        <div>
-            <p>hello</p>
+        <div className='setlistArea'>
+            {/* <p>{thesetlist.showdate}</p> */}
+            <div className='setlistDiv'>
+              <h5>{thesetlist}</h5>
+            </div>
+            <div className='randomButtonDiv'>
+              <button class="button-50" role="button" onClick={() => getRandomSetlist()}>Mystery Setlist</button>
+            </div>
         </div>
     )
 }
 
 export default SetlistArea;
+
+

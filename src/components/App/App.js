@@ -9,9 +9,18 @@ const App = () => {
   const [setlist, setSetlist] = useState([]);
 
   useEffect(() => {
+    //either do another fetch call inside here to load setlist
+    // fetch(`https://api.phish.net/v5/setlists/showdate/${getRandom.showdate}.json?apikey=${process.env.REACT_APP_API_KEY}`)
+    //   .then((res) => res.json())
+    //   .then((data) => setSetlist(data.data))
+
     fetch(`https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=${process.env.REACT_APP_API_KEY}`)
      .then((res) => res.json())
      .then((data) => setShows(data.data))
+
+    fetch(`https://api.phish.net/v5/setlists/showdate/1998-10-30.json?apikey=${process.env.REACT_APP_API_KEY}`)
+      .then((res) => res.json())
+      .then((data) => setSetlist(data.data))
   }, [])
 
   const getRandomSetlist = () => {
@@ -20,13 +29,15 @@ const App = () => {
     return fetch(`https://api.phish.net/v5/setlists/showdate/${getRandom.showdate}.json?apikey=${process.env.REACT_APP_API_KEY}`)
       .then((res) => res.json())
       .then((data) => setSetlist(data.data))
+      
   }
  
   return (
     <div className="App">
+      {/* {window.addEventListener("load", setlist)} */}
      <Header />
-     <SetlistArea setlist={setlist}/>
-     <button onClick={() => getRandomSetlist()}>Get a random setlist</button>
+     <SetlistArea setlist={setlist} getRandomSetlist={getRandomSetlist}/>
+     {/* <button onClick={() => getRandomSetlist()}>Get a random setlist</button> */}
     </div>
   );
 }

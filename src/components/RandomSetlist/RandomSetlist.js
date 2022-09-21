@@ -1,12 +1,14 @@
 import React from 'react';
 import './RandomSetlist.css'
 
-const RandomSetlist = ({setlist, showdate, id}) => {
+const RandomSetlist = ({artistname, showdate, venue, city, song}) => {
   return (
     <div className='setlistCard'>
-        <p>{setlist}</p>
+        {/* <p>{artistname}</p>
         <p>{showdate}</p>
-        <p>{id}</p>
+        <p>{venue}</p>
+        <p>{city}</p> */}
+        <p className='songs'>{song}</p>
 
     </div>
   )
