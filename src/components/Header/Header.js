@@ -8,7 +8,7 @@ const Header = () => {
              <h1>You Enjoy My Setlist</h1>
             </div>
             <div className='headerButton'>
-             <button>Go to form</button>
+             <button className='accessMeButton'>Access Me</button>
             </div>
         </div>
     )
