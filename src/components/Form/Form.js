@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 // import Guesses from '../Guesses/Guesses';
 import './Form.css';
 
-const Form = ({addGuess}) => {
+const Form = ({ addGuess }) => {
     // const [formData, setFormData] = useState([{
     //     firstName: "",
     //     set1opener: "",
@@ -19,8 +19,8 @@ const Form = ({addGuess}) => {
     const [encore, setEncore] = useState("")
 
     // const [guessState, setGuessState] = useState([])
-    
- 
+
+
     // const handleChange = (event) => {
     //     setFormData(prevFormData => {
     //         return {
@@ -32,7 +32,7 @@ const Form = ({addGuess}) => {
     // const addGuess = (newGuess) => { setGuessState([...guessState, newGuess]) }
     const handleSubmit = (event) => {
         event.preventDefault();
-        
+
         const newGuess = {
             id: Date.now(),
             firstName,
@@ -45,14 +45,14 @@ const Form = ({addGuess}) => {
         addGuess(newGuess)
         clearInputs();
     }
-    
+
     const clearInputs = () => {
-            setFirstName("");
-            setSet1opener("");
-            setSet2opener("");
-            setBustout("");
-            setCover("");
-            setEncore("");
+        setFirstName("");
+        setSet1opener("");
+        setSet2opener("");
+        setBustout("");
+        setCover("");
+        setEncore("");
     }
 
     return (
@@ -108,8 +108,8 @@ const Form = ({addGuess}) => {
                         name="encore"
                         value={encore}
                     />
-                    <button onClick={handleSubmit}>Send it</button>
                 </div>
+                <button className="sendButton" role="button" onClick={handleSubmit}>Send it</button>
 
             </form>
             {/* <Guesses guesses={guessState}/> */}

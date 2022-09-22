@@ -1,7 +1,9 @@
 .guessCard {
-    border: 2px solid red;
-    height: 20em;
+    border: 4px solid rgb(19, 149, 130);
+    height: 18.5em;
     width: 15em;
+    margin: .5em;
+    border-radius: 5px;
 }
 
 .guessHolder {

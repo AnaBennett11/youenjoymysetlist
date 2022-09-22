@@ -6,8 +6,7 @@ const GuessCard = ({ firstName, set1opener, set2opener, bustout, cover, encore }
     return (
         <fieldset className='guessCard'>
             <div className='firstNameDiv'>
-                <label htmlFor="firstName">Name: {firstName}</label>
-                <input className='checkbox' type="checkbox" id="firstName" name="firstName" />
+                <label htmlFor="firstName">{firstName}'s guesses</label>
             </div>
             <div className='set1openerDiv'>
                 <label htmlFor="set1opener">Set 1 Opener: {set1opener}</label>

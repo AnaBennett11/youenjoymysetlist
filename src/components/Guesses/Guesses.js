@@ -17,12 +17,11 @@ const Guesses = ({ guessState }) => {
     })
     // console.log(theGuesses, "the guesses")
     return (
-        <div>
-            <p>The Guesses:</p>
+        <div className='guessesAndButtonDiv'>
             <div className='guessHolder'>
                 {theGuesses}
             </div>
-            <button>Go Home</button>
+            <button className='homeButton'>back to your abode</button>
         </div>
     )
 }
