@@ -1,0 +1,35 @@
+.guessCard {
+    border: 2px solid red;
+    height: 20em;
+    width: 15em;
+}
+
+.guessHolder {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    width: 40em;
+    flex-wrap: wrap;
+    overflow: scroll;
+    height: 30em;
+    width: 35em;
+    margin-top: 2em;
+
+}
+.inputFields{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 1em;
+}
+.firstNameDiv, .set1openerDiv, .set2openerDiv, .bustoutDiv, .coverDiv, .encoreDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-right: 0em;
+    margin-bottom: 0em;
+    /* margin-left: 2em; */
+
+}
+
+.checkbox {
+    margin-left: 0;
+}

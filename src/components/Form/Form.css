@@ -1,0 +1,28 @@
+
+.formDiv {
+    display: flex;
+    flex-direction: column;
+    border: black solid 1px;
+    margin: 4em;
+    height: 25em;
+    width: 14em;
+    border-radius: 5px;
+}
+
+input {
+    margin: 1em;
+    height: 2em;
+    width: 15em;
+    text-indent: 1em;
+    border: 1px solid #444;
+    border-radius: 5px;
+    display: block;
+}
+.formLabels {
+    margin-left: 1em;
+}
+.formAndGuessesContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

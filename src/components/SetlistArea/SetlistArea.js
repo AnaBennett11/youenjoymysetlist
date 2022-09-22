@@ -17,7 +17,7 @@ const SetlistArea = ({setlist, getRandomSetlist}) => {
               <h5>{thesetlist}</h5>
             </div>
             <div className='randomButtonDiv'>
-              <button class="button-50" role="button" onClick={() => getRandomSetlist()}>Mystery Setlist</button>
+              <button className="button-50" role="button" onClick={() => getRandomSetlist()}>Mystery Setlist</button>
             </div>
         </div>
     )

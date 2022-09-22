@@ -1,14 +1,22 @@
 .setlistArea{
-    height: 32em;
-    width: 32em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 3em;
-    margin-left: 3em;
+    margin-top: 1em;
+    margin-left: 1em;
 }
+.setlistDiv {
+  height: 20em;
+  width: 32em;
+  overflow: scroll;
+  border: black solid 1px;
+  border-radius: 5px;
+}
+
 h5 {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0em;
+  font-size: 1.2em;
 }
 
 .button-50 {
@@ -22,11 +30,10 @@ h5 {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  /* font-family: ITCAvantGardeStd-Bk, Arial, sans-serif; */
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  margin: 0 1px 10px 0;
+  margin: 1em;
   overflow: visible;
   padding: 12px 40px;
   text-align: center;

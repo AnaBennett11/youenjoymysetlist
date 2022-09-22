@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import Header from '../Header/Header';
-import SetlistArea from '../SetlistArea/SetlistArea'
+// import Header from '../Header/Header';
+// import SetlistArea from '../SetlistArea/SetlistArea'
+import Form from '../Form/Form'
+import Guesses from '../Guesses/Guesses'
 import './App.css';
 // console.log(process.env.REACT_APP_API_KEY)
 
 const App = () => {
   const [shows, setShows] = useState([]);
   const [setlist, setSetlist] = useState([]);
+
+  const [guessState, setGuessState] = useState([])
+  const addGuess = (newGuess) => { setGuessState([...guessState, newGuess]) }
 
   useEffect(() => {
     //either do another fetch call inside here to load setlist
@@ -34,10 +39,15 @@ const App = () => {
  
   return (
     <div className="App">
-      {/* {window.addEventListener("load", setlist)} */}
-     <Header />
-     <SetlistArea setlist={setlist} getRandomSetlist={getRandomSetlist}/>
-     {/* <button onClick={() => getRandomSetlist()}>Get a random setlist</button> */}
+     {/* <Header />
+     <main>
+      <SetlistArea setlist={setlist} getRandomSetlist={getRandomSetlist}/>
+      <p className='description'>Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go.</p>
+     </main> */}
+     <div className='formGuessDiv'>
+       <Form addGuess={addGuess}/>
+       <Guesses guessState={guessState} />
+      </div>
     </div>
   );
 }
