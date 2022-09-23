@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import SetlistArea from '../SetlistArea/SetlistArea'
 import Form from '../Form/Form'
 import Guesses from '../Guesses/Guesses'
-// import { fetchData } from '../../apiCalls';
+import { getAllShows, getShowByDate } from '../../apiCalls';
 import './App.css';
 
 
@@ -15,13 +15,11 @@ const App = () => {
   const addGuess = (newGuess) => { setGuessState([...guessState, newGuess]) }
 
   useEffect(() => {
-    fetch(`https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=${process.env.REACT_APP_API_KEY}`)
-      .then((res) => res.json())
-      .then((data) => setShows(data.data))
+    getAllShows().then((json) =>
+       setShows(json.data))
 
-    fetch(`https://api.phish.net/v5/setlists/showdate/1998-10-30.json?apikey=${process.env.REACT_APP_API_KEY}`)
-      .then((res) => res.json())
-      .then((data) => setSetlist(data.data))
+    getShowByDate().then((json) =>   
+      setSetlist(json.data))
   }, [])
 
   const getRandomSetlist = () => {
