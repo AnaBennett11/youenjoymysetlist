@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../Header/Header';
-import SetlistArea from '../SetlistArea/SetlistArea'
-import Form from '../Form/Form'
-import Guesses from '../Guesses/Guesses'
-import { getAllShows, getShowByDate } from '../../apiCalls';
+import SetlistArea from '../SetlistArea/SetlistArea';
+import Form from '../Form/Form';
+import Guesses from '../Guesses/Guesses';
+import Error from '../Error/Error';
+import { getAllShows, getShowByDate, getRandomShow } from '../../apiCalls';
 import './App.css';
+import { Switch, Route, Link } from 'react-router-dom';
 
 
 const App = () => {
@@ -16,40 +18,65 @@ const App = () => {
 
   useEffect(() => {
     getAllShows().then((json) =>
-       setShows(json.data))
+      setShows(json.data))
 
-    getShowByDate().then((json) =>   
+    getShowByDate().then((json) =>
       setSetlist(json.data))
   }, [])
 
   const getRandomSetlist = () => {
     const getRandom = shows[Math.floor(Math.random() * shows.length)]
-  
-    return fetch(`https://api.phish.net/v5/setlists/showdate/${getRandom.showdate}.json?apikey=${process.env.REACT_APP_API_KEY}`)
-      .then((res) => res.json())
+    getRandomShow(getRandom)
       .then((data) => setSetlist(data.data))
-
+  }
+  const handleClick = () => {
+    setGuessState(guessState)
   }
 
   return (
+
     <div className="App">
       <Header />
-      <main>
-        <SetlistArea setlist={setlist} getRandomSetlist={getRandomSetlist} />
-        <div className='descriptionDiv'>
-          <button className='accessMeButton'>Access Me</button>
-          <p className='description'>Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go.</p>
-        </div>
-      </main>
-      <div className='formGuessDiv'>
-        <Form addGuess={addGuess} />
-        <Guesses guessState={guessState} />
-      </div>
+      <Switch>
+        <Route
+          exact
+          path='/'
+          render={() => (
+            <div>
+              <main>
+                <SetlistArea setlist={setlist} getRandomSetlist={getRandomSetlist} />
+                <div className='descriptionDiv'>
+                  <Link to={`/form`} onClick={handleClick}>
+                    <button className='accessMeButton'>Access Me</button>
+                  </Link>
+                  <p className='description'>Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go.</p>
+                </div>
+              </main>
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/form"
+          render={() => (
+            <div className='formGuessDiv'>
+              <Form addGuess={addGuess} />
+              <Guesses guessState={guessState} />
+            </div>
+          )}
+        />
+        <Route
+          path="*"
+          render={() => (
+            <div>
+              <Error />
+            </div>
+          )}
+        />
+      </Switch>
     </div>
   );
-}
-
+};
 export default App;
 
 
-//button name idea for going back home, take you back to your abode

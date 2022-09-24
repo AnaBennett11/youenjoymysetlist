@@ -4,6 +4,7 @@
     width: 15em;
     margin: .5em;
     border-radius: 5px;
+    padding: .5em;
 }
 
 .guessHolder {

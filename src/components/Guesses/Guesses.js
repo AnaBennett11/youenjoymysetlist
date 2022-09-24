@@ -1,6 +1,7 @@
 import React from 'react';
 import GuessCard from '../GuessCard/GuessCard'
 import './Guesses.css'
+import { Link } from 'react-router-dom';
 
 const Guesses = ({ guessState }) => {
     // console.log(guessState)
@@ -15,13 +16,17 @@ const Guesses = ({ guessState }) => {
             encore={guess.encore}
         />)
     })
+
+ 
     // console.log(theGuesses, "the guesses")
     return (
         <div className='guessesAndButtonDiv'>
             <div className='guessHolder'>
                 {theGuesses}
             </div>
-            <button className='homeButton'>back to your abode</button>
+            <Link to={`/`} >
+                <button className='homeButton'>back to your abode</button>
+            </Link>
         </div>
     )
 }
