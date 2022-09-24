@@ -1,17 +1,18 @@
-.setlistArea{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 1em;
-    margin-left: 1em;
+.setlistArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 1em;
+  margin-left: 1em;
 }
+
 .setlistDiv {
   height: 20em;
   width: 32em;
   overflow: scroll;
   border: black solid 1px;
   border-radius: 5px;
-  
+
 }
 
 h5 {

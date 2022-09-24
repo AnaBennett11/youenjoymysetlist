@@ -12,7 +12,6 @@
 }
 
 .guessHolder {
-    /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
     width: 40em;
@@ -34,7 +33,7 @@
     align-items: flex-start;
     margin-right: 0em;
     margin-bottom: 0em;
-    /* margin-left: 2em; */
+  
 
 }
 
