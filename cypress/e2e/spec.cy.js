@@ -3,7 +3,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   // failing the test, Cypress doesn't like the word "showdate" 
   // which is included in my API calls because it isn't
   // technically a word, which is why I had to include this 
-  // code.
+  // code
   return false
 })
 
