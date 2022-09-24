@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Guesses.css'
 import { Link } from 'react-router-dom';
 
-const Guesses = ({ guessState, deleteGuess }) => {
+const Guesses = ({ guessState }) => {
 
     const theGuesses = guessState.map(guess => {
         return (<GuessCard
@@ -15,7 +15,6 @@ const Guesses = ({ guessState, deleteGuess }) => {
             bustout={guess.bustout}
             cover={guess.cover}
             encore={guess.encore}
-            delete={deleteGuess}
         />)
     })
 
