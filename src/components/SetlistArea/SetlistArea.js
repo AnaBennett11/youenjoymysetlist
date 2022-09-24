@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './SetlistArea.css';
 
 const SetlistArea = ({ setlist, getRandomSetlist }) => {
-
+  
   const thesetlist = setlist.map((setlist) => <RandomSetlist
     key={setlist.uniqueid}
     song={setlist.song}
