@@ -1,18 +1,20 @@
 import React from 'react';
 import './RandomSetlist.css'
+import PropTypes from 'prop-types';
 
-const RandomSetlist = ({artistname, showdate, venue, city, song}) => {
+const RandomSetlist = ({ song }) => {
   return (
     <div className='setlistCard'>
-        {/* <p>{artistname}</p>
-        <p>{showdate}</p>
-        <p>{venue}</p>
-        <p>{city}</p> */}
-        <p className='songs'>{song}</p>
-
+      <p className='songs'>{song}</p>
     </div>
   )
-
 }
 
 export default RandomSetlist;
+
+
+
+RandomSetlist.propTypes = {
+  song: PropTypes.string
+
+}

@@ -49,7 +49,7 @@ const App = () => {
                   <Link to={`/form`} onClick={handleClick}>
                     <button className='accessMeButton'>Access Me</button>
                   </Link>
-                  <p className='description'>Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go. Hello this is where teh instructions to the app will go.</p>
+                  <p className='description'>Are you and your phriends embarassingly obsessed with the band Phish? Do you like to guess what songs they'll play before every show? Click the button above to submit your guesses! You can submit your phriends' guesses too. You can also press 'Mystery Setlist' for inspiration. </p>
                 </div>
               </main>
             </div>

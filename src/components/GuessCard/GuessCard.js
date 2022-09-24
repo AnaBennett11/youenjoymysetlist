@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './GuessCard.css'
 
 const GuessCard = ({ firstName, set1opener, set2opener, bustout, cover, encore }) => {
@@ -6,7 +8,7 @@ const GuessCard = ({ firstName, set1opener, set2opener, bustout, cover, encore }
     return (
         <fieldset className='guessCard'>
             <div className='firstNameDiv'>
-                <label htmlFor="firstName">{firstName}'s guesses</label>
+                <label htmlFor="firstName">{firstName}'s Guesses</label>
             </div>
             <div className='set1openerDiv'>
                 <label htmlFor="set1opener">Set 1 Opener: {set1opener}</label>
@@ -29,11 +31,16 @@ const GuessCard = ({ firstName, set1opener, set2opener, bustout, cover, encore }
                 <input className='checkbox' type="checkbox" id="encore" name="encore" />
             </div>
         </fieldset>
-
-
-
-
-    )
-}
+    );
+};
 
 export default GuessCard;
+
+GuessCard.propTypes = {
+    firstName: PropTypes.string,
+    set1opener: PropTypes.string,
+    set2opener: PropTypes.string,
+    bustout: PropTypes.string,
+    cover: PropTypes.string,
+    encore: PropTypes.string
+}

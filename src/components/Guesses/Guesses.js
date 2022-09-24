@@ -1,10 +1,11 @@
 import React from 'react';
 import GuessCard from '../GuessCard/GuessCard'
+import PropTypes from 'prop-types';
 import './Guesses.css'
 import { Link } from 'react-router-dom';
 
-const Guesses = ({ guessState }) => {
-    // console.log(guessState)
+const Guesses = ({ guessState, deleteGuess }) => {
+
     const theGuesses = guessState.map(guess => {
         return (<GuessCard
             key={guess.firstName}
@@ -14,11 +15,10 @@ const Guesses = ({ guessState }) => {
             bustout={guess.bustout}
             cover={guess.cover}
             encore={guess.encore}
+            delete={deleteGuess}
         />)
     })
 
- 
-    // console.log(theGuesses, "the guesses")
     return (
         <div className='guessesAndButtonDiv'>
             <div className='guessHolder'>
@@ -32,3 +32,9 @@ const Guesses = ({ guessState }) => {
 }
 
 export default Guesses;
+
+
+Guesses.propTypes = {
+    guessState: PropTypes.array,
+
+}

@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
-
-// import Guesses from '../Guesses/Guesses';
+import PropTypes from 'prop-types';
 import './Form.css';
 
 const Form = ({ addGuess }) => {
-    // const [formData, setFormData] = useState([{
-    //     firstName: "",
-    //     set1opener: "",
-    //     set2opener: "",
-    //     bustout: "",
-    //     cover: "",
-    //     encore: ""
-    // }])
+
     const [firstName, setFirstName] = useState("")
     const [set1opener, setSet1opener] = useState("")
     const [set2opener, setSet2opener] = useState("")
@@ -19,18 +11,6 @@ const Form = ({ addGuess }) => {
     const [cover, setCover] = useState("")
     const [encore, setEncore] = useState("")
 
-    // const [guessState, setGuessState] = useState([])
-
-
-    // const handleChange = (event) => {
-    //     setFormData(prevFormData => {
-    //         return {
-    //             ...prevFormData,
-    //             [event.target.name]: event.target.value
-    //         }
-    //     })
-    // }
-    // const addGuess = (newGuess) => { setGuessState([...guessState, newGuess]) }
     const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -59,50 +39,43 @@ const Form = ({ addGuess }) => {
     return (
         <div className='formAndGuessesContainer'>
             <form >
-                {/* onSubmit={handleSubmit} */}
                 <div className='formDiv'>
-                    <p className='formLabels'>Name:</p>
-                    <input
+                    <input className='input1'
                         type="text"
                         placeholder="name"
                         onChange={(event) => setFirstName(event.target.value)}
                         name="firstName"
                         value={firstName}
                     />
-                    <p className='formLabels'>Set 1 Opener:</p>
-                    <input
+                    <input className='input2'
                         type="text"
                         placeholder="set1opener"
                         onChange={(event) => setSet1opener(event.target.value)}
                         name="set1opener"
                         value={set1opener}
                     />
-                    <p className='formLabels'>Set 2 Opener:</p>
-                    <input
+                    <input className='input3'
                         type="text"
                         placeholder="set2opener"
                         onChange={(event) => setSet2opener(event.target.value)}
                         name="set2opener"
                         value={set2opener}
                     />
-                    <p className='formLabels'>Bustout:</p>
-                    <input
+                    <input className='input4'
                         type="text"
                         placeholder="bustout"
                         onChange={(event) => setBustout(event.target.value)}
                         name="bustout"
                         value={bustout}
                     />
-                    <p className='formLabels'>Cover:</p>
-                    <input
+                    <input className='input5'
                         type="text"
                         placeholder="cover"
                         onChange={(event) => setCover(event.target.value)}
                         name="cover"
                         value={cover}
                     />
-                    <p className='formLabels'>Encore:</p>
-                    <input
+                    <input className='input6'
                         type="text"
                         placeholder="encore"
                         onChange={(event) => setEncore(event.target.value)}
@@ -111,9 +84,7 @@ const Form = ({ addGuess }) => {
                     />
                 </div>
                 <button className="sendButton" role="button" onClick={handleSubmit}>Send it</button>
-
             </form>
-            {/* <Guesses guesses={guessState}/> */}
         </div>
 
     )
@@ -122,4 +93,7 @@ const Form = ({ addGuess }) => {
 
 export default Form;
 
+Form.propTypes = {
+    addGuess: PropTypes.func
 
+}
