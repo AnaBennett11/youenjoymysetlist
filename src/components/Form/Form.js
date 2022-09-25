@@ -41,15 +41,17 @@ const Form = ({ addGuess }) => {
             <form >
                 <div className='formDiv'>
                     <input className='input1'
-                        type="text"
+                        type="text" 
                         placeholder="name"
+                        required
                         onChange={(event) => setFirstName(event.target.value)}
                         name="firstName"
-                        value={firstName}
+                        value={firstName} 
                     />
                     <input className='input2'
                         type="text"
                         placeholder="set1opener"
+                        required
                         onChange={(event) => setSet1opener(event.target.value)}
                         name="set1opener"
                         value={set1opener}
@@ -57,6 +59,7 @@ const Form = ({ addGuess }) => {
                     <input className='input3'
                         type="text"
                         placeholder="set2opener"
+                        required
                         onChange={(event) => setSet2opener(event.target.value)}
                         name="set2opener"
                         value={set2opener}
@@ -64,6 +67,7 @@ const Form = ({ addGuess }) => {
                     <input className='input4'
                         type="text"
                         placeholder="bustout"
+                        required
                         onChange={(event) => setBustout(event.target.value)}
                         name="bustout"
                         value={bustout}
@@ -71,6 +75,7 @@ const Form = ({ addGuess }) => {
                     <input className='input5'
                         type="text"
                         placeholder="cover"
+                        required
                         onChange={(event) => setCover(event.target.value)}
                         name="cover"
                         value={cover}
@@ -78,6 +83,7 @@ const Form = ({ addGuess }) => {
                     <input className='input6'
                         type="text"
                         placeholder="encore"
+                        required
                         onChange={(event) => setEncore(event.target.value)}
                         name="encore"
                         value={encore}

@@ -18,6 +18,7 @@ input {
     border-radius: 5px;
     display: block;
 }
+
 .formLabels {
     margin-left: 1em;
 }
@@ -70,4 +71,8 @@ input {
 .sendButton:not([disabled]):active {
     box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
     transform: translate(2px, 2px);
+}
+
+.input1, .input2, .input3, .input4, .input5, .input6 {
+    box-shadow: inset 0 0 5px black;
 }

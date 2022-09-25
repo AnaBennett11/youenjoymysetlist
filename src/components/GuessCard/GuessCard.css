@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    box-shadow: 0 0 10px rgb(75, 115, 109);
 }
 
 .guessHolder {
@@ -26,7 +27,9 @@
 .inputFields{
     font-family: Arial, Helvetica, sans-serif;
     margin: 1em;
+    
 }
+
  .set1openerDiv, .set2openerDiv, .bustoutDiv, .coverDiv, .encoreDiv {
     display: flex;
     flex-direction: row;
