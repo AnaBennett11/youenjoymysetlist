@@ -97,4 +97,4 @@ https://user-images.githubusercontent.com/98188684/192151066-bbd81c3d-72ca-44bf-
 ## Reflections:
 
 
-<p>I'm super pleased with how this project turned out. I was happy to let my passion for music dictate the flow of this project. I deepened my understanding with React and incorporated Hooks instead of using class components. The hardest part of this project was protecting the API key while stubbing my data in Cypress. This was something new for me. Overall, I'd love to implement some future extensions of deleting a card. </p>
+<p>I'm super pleased with how this project turned out. I was happy to let my passion for music dictate the flow of this project. I deepened my understanding with React and incorporated Hooks instead of using class components. The hardest part of this project was protecting the API key while stubbing my data in Cypress. Also, deployment presented issues with this key as well. This was something new for me. Overall, I'd love to implement some future extensions mentioned above.  </p>
