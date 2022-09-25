@@ -1,3 +1,6 @@
+const theKey = process.env.REACT_APP_API_KEY 
+
+// import data from '../fixtures/process.env.REACT_APP_API_KEY.json';
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
   // failing the test, Cypress doesn't like the word "showdate" 
@@ -9,11 +12,13 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 describe("App", () => {
   beforeEach(() => {
+    cy.intercept("GET", `https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=${theKey}`, {
+      fixture: '/showdata.json'
+    }).as("shows")
+    cy.intercept("GET", `https://api.phish.net/v5/setlists/showdate/1998-10-30.json?apikey=${theKey}`, {
+      fixture: '/setlistdata.json'
+    }).as("setlist")
     cy.visit("http://localhost:3000")
-    // cy.intercept("GET", `https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=process.env.REACT_APP_API_KEY`, {
-    //   fixture: "/process.env.REACT_APP_API_KEY.json"
-    //  })
-    //    .as("sampleData").visit("http://localhost:3000").wait("@sampleData").its("response.body").should("have.length", 2)
   });
   it("should show the main page", () => {
     cy.get('.headerContainer')
