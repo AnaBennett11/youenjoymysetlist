@@ -1,7 +1,7 @@
  <h2 align="center">
  
- ![Screen Shot 2022-09-25 at 10 09 53 AM](https://user-images.githubusercontent.com/98188684/192150751-d19797fb-3eeb-4ea9-ab4b-c0980a1bbf17.png)
- "This application allows the user to generate a mystery setlist from any Phish show in history. It also allows a user to fill out a form with their guesses and/or their phriends guesses to what songs the band will play in their next show. 
+ ![Screen Shot 2022-09-25 at 10 09 53 AM](https://user-images.githubusercontent.com/98188684/192150751-d19797fb-3eeb-4ea9-ab4b-c0980a1bbf17.png)<br>
+ "This application allows the user to generate a mystery setlist from any Phish show in history. It also allows a user to fill out a form with their guesses and/or their phriends guesses to what songs the band will play in their next show."
 
 </h2>
 
@@ -14,7 +14,7 @@
 <div align="center">
 ## 🛸 <b>Deployed Pages:</b>
 
-[YouEnjoyMySetlist](https://vercel.com/anabennett11/youenjoymysetlist/BVCUPrQ6LKiYx2GfNx85NDhuN9wq)
+[YouEnjoyMySetlist](https://youenjoymysetlist-anabennett11.vercel.app/)
 
 </div>
 
