@@ -14,7 +14,7 @@
 <div align="center">
 ## 🛸 <b>Deployed Pages:</b>
 
-[YouEnjoyMySetlist](https://vercel.com/anabennett11/youenjoymysetlist/BVCUPrQ6LKiYx2GfNx85NDhuN9wq)
+[YouEnjoyMySetlist](https://youenjoymysetlist-anabennett11.vercel.app/)
 
 </div>
 
