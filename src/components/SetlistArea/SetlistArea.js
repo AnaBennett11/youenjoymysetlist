@@ -13,7 +13,7 @@ const SetlistArea = ({ setlist, getRandomSetlist }) => {
   return (
     <div className='setlistArea'>
       <div className='setlistDiv'>
-        <h5>{thesetlist}</h5>
+        {!thesetlist.length ? <h5>Oh something went wrong please try again.</h5> : <h5>{thesetlist}</h5>}
       </div>
       <div className='randomButtonDiv'>
         <button className="button-50" onClick={() => getRandomSetlist()}>Mystery Setlist</button>

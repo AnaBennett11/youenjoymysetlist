@@ -12,6 +12,8 @@
   overflow: scroll;
   border: black solid 1px;
   border-radius: 5px;
+  text-align: center;
+  /* line-height: 2em; */
 
 }
 
