@@ -26,7 +26,7 @@ const App = () => {
 
   const getRandomSetlist = () => {
     const getRandom = shows[Math.floor(Math.random() * shows.length)]
-    getRandomShow(getRandom)
+    getRandomShow(getRandom.showdate)
       .then((data) => setSetlist(data.data))
   }
   const handleClick = () => {

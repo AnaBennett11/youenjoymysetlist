@@ -25,10 +25,10 @@ const getShowByDate = () => {
 
 const getRandomShow = (date) => {
     return (
-        fetch(`https://api.phish.net/v5/setlists/showdate/${date.showdate}.json?apikey=${process.env.REACT_APP_API_KEY}`)
+        fetch(`https://api.phish.net/v5/setlists/showdate/${date}.json?apikey=${process.env.REACT_APP_API_KEY}`)
             .then(response => {
                 if (response.ok) {
-                    return response.json();
+                   return response.json();
                 } else {
                     throw new Error();
                 }
