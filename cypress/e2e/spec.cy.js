@@ -1,6 +1,6 @@
 const theKey = process.env.REACT_APP_API_KEY 
 
-// import data from '../fixtures/process.env.REACT_APP_API_KEY.json';
+
 Cypress.on('uncaught:exception', (err, runnable) => {
   // returning false here prevents Cypress from
   // failing the test, Cypress doesn't like the word "showdate" 
