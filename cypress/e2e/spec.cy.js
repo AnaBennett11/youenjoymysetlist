@@ -10,10 +10,10 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe("App", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000")
-    // cy.intercept("GET", `https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=spec`, {
-    //   fixture: "/spec.json"
-    // })
-    //   .as("sampleData").visit("http://localhost:3000").wait("@sampleData").its("response.body").should("have.length", 2)
+    // cy.intercept("GET", `https://api.phish.net/v5/shows/artist/phish.json?order_by=showdate&apikey=process.env.REACT_APP_API_KEY`, {
+    //   fixture: "/process.env.REACT_APP_API_KEY.json"
+    //  })
+    //    .as("sampleData").visit("http://localhost:3000").wait("@sampleData").its("response.body").should("have.length", 2)
   });
   it("should show the main page", () => {
     cy.get('.headerContainer')
