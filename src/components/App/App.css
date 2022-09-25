@@ -100,3 +100,19 @@ main {
   flex-direction: column;
 
 }
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+
+ .descriptionDiv{
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+  .p {
+    margin-left: 1%;
+  }
+    
+
+
+
+}
