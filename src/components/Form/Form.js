@@ -96,10 +96,11 @@ const Form = ({ addGuess }) => {
     )
 }
 
+Form.propTypes = {
+  addGuess: PropTypes.func
+}
+
 
 export default Form;
 
-Form.propTypes = {
-    addGuess: PropTypes.func.isRequired,
 
-}

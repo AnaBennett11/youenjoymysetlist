@@ -30,9 +30,12 @@ const Guesses = ({ guessState }) => {
     )
 }
 
+Guesses.propTypes = {
+  guessState: PropTypes.shape({
+    map: PropTypes.func
+  })
+}
+
 export default Guesses;
 
 
-Guesses.propTypes = {
-  guessState: PropTypes.array
-}

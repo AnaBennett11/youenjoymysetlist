@@ -22,6 +22,7 @@ const SetlistArea = ({ setlist, getRandomSetlist }) => {
   )
 }
 
+
 export default SetlistArea;
 
 SetlistArea.propTypes = {
