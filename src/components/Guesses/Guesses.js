@@ -34,6 +34,5 @@ export default Guesses;
 
 
 Guesses.propTypes = {
-    guessState: PropTypes.array,
-
+  guessState: PropTypes.array
 }

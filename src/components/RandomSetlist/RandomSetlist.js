@@ -16,5 +16,4 @@ export default RandomSetlist;
 
 RandomSetlist.propTypes = {
   song: PropTypes.string
-
 }
